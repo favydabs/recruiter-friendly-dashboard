@@ -86,14 +86,13 @@ export default function Dashboard() {
   return (
     <div className="container mx-auto p-4">
       <div className="flex justify-between items-center mb-6">
-        <h1 className="text-2xl font-bold">Candidates Dashboard</h1>
-        <Link href="/" className="bg-blue-500 text-white px-4 py-2 rounded">
+        <h1 className="text-2xl font-bold ">Candidates Dashboard</h1>
+        <Link href="/" className="bg-blue-500 text-white px-4 py-2 rounded-xl">
           Add New Candidate
         </Link>
       </div>
 
       <div className="bg-white p-4 rounded-lg shadow mb-6">
-        <h2 className="text-lg font-semibold mb-4">Filter & Sort</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           <div>
@@ -101,7 +100,7 @@ export default function Dashboard() {
             <select
               value={sortBy}
               onChange={handleSortChange}
-              className="w-full border rounded p-2"
+              className="w-full border rounded-xl p-2"
             >
               <option value="name">Name</option>
               <option value="experience">Experience Level</option>
@@ -118,7 +117,7 @@ export default function Dashboard() {
               value={filters.role}
               onChange={handleFilterChange}
               placeholder="Enter role..."
-              className="w-full border rounded p-2"
+              className="w-full border rounded-xl p-2"
             />
           </div>
 
@@ -130,7 +129,7 @@ export default function Dashboard() {
               name="experience"
               value={filters.experience}
               onChange={handleFilterChange}
-              className="w-full border rounded p-2"
+              className="w-full border rounded-xl p-2"
             >
               <option value="">All Levels</option>
               <option value="Junior">Junior</option>
@@ -149,7 +148,7 @@ export default function Dashboard() {
               value={filters.techStack}
               onChange={handleFilterChange}
               placeholder="e.g., React"
-              className="w-full border rounded p-2"
+              className="w-full border rounded-xl p-2"
             />
           </div>
         </div>
@@ -164,7 +163,7 @@ export default function Dashboard() {
           {filteredCandidates.map((candidate, index) => (
             <div
               key={index}
-              className="border rounded-lg p-4 bg-white shadow hover:shadow-md transition-shadow"
+              className="border rounded-xl p-4 bg-white shadow hover:shadow-md transition-shadow"
             >
               <div className="flex justify-between items-start">
                 <div>
